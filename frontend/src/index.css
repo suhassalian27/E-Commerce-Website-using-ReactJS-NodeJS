@@ -113,6 +113,7 @@ a:hover{
   width: 30rem;
   background-color: white;
   height: 100%;
+  transition: all .5s;
 }
 .open{
   transform: translate(0);
