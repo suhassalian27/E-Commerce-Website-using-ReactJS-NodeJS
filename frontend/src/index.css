@@ -1,0 +1,135 @@
+html{
+  font-size: 62.5%;   
+  box-sizing: border-box;
+}
+body{
+  font: 1.6rem Helvetica;
+  height: 100vh;
+  margin: 0%;   
+}
+.grid-container{
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+.header{
+  grid-area: header;
+  background-color: rgb(29, 42, 54);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+}
+.brand a{
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.header-links a{
+  color: white;
+  text-decoration: none;
+}
+.header-links a:hover{
+  color: rgb(255, 136, 0);
+}
+.main{
+  grid-area: main;
+}
+.footer{
+  grid-area: footer;
+  background-color: rgb(29, 42, 54);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  color: rgb(255, 136, 0);
+}
+/* Home Screen */
+.products{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.products li{
+  list-style: none;
+  padding: 0;
+  flex: 0 1 34rem;
+  margin: 1 rem;
+  height: 50rem;
+  border-bottom: .1rem #c0c0c0 solid;
+}
+.product{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: .5rem;
+}
+.product-name{
+  font-size: 2rem;
+  font-weight: bold;
+
+}
+.product-brand{
+  font-size:1.2rem;
+  color: #808080;
+}
+.product-price{
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.product-image{
+  max-width: 34rem;
+  max-height: 34rem;
+}
+.product-rating{
+  margin-bottom: 1rem;
+}
+/* SideBar */
+.brand button{
+  font-size: 3rem;
+  padding: .5rem;
+  background: none;
+  border:none;
+  color: #ffffff;
+  cursor:pointer;
+}
+.sidebar{
+  position: fixed;
+  transform: translate(-30rem);
+  width: 30rem;
+  background-color: white;
+  height: 100%;
+}
+.open{
+  transform: translate(0);
+}
+.sidebar-close-button{
+  border-radius: 50%;
+  border: .1 rem black;
+  width: 3rem;
+  height: 3rem;
+  padding: .5rem;
+  font-size: 2rem;
+  padding-top: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+}
+.sidebar ul{
+  list-style: none;
+}
