@@ -2,11 +2,17 @@ import React from "react";
 import "./App.css";
 
 function App() {
+  const openmenu = () =>{
+    document.querySelector(".sidebar").classList.add("open")
+  }
+  const closemenu = () =>{
+    document.querySelector(".sidebar").classList.remove("open") 
+  }
     return (
         <div className="grid-container">
             <header className="header">
                 <div className="brand">
-                    <button onclick="openmenu()">&#9776;</button>
+                    <button onClick={openmenu}>&#9776;</button>
                     <a href="index.html">amazon</a>
                 </div>
                 <div className="header-links">
@@ -16,7 +22,7 @@ function App() {
             </header>
             <aside className="sidebar">
                 <h3>Shopping Categories</h3>
-                <button className="sidebar-close-button" onclick="closemenu()">
+                <button className="sidebar-close-button" onClick={closemenu}>
                     x
                 </button>
                 <ul>
