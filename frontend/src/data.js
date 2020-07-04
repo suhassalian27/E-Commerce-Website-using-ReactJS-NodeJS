@@ -2,43 +2,43 @@ export default {
     products: [
         {
             _id: "1",
-            name: "Slim Shirt",
-            category: "Shirts",
-            image: "/images/d1.jpeg",
-            price: 60,
+            name: "Nike Men's Regular fit T-Shirt",
+            category: "Shirt",
+            image: "/images/d1.jpg",
+            price: 35,
             brand: " Nike",
-            rating: 4.5,
-            numReviews: 10
+            rating: 3.0,
+            numReviews: 13
         },
         {
             _id: "2",
-            name: "Fit Shirt",
-            category: "Shirts",
-            image: "/images/d1.jpeg",
+            name: "Nike Men's Track Pants",
+            category: "Pants",
+            image: "/images/d2.jpg",
             price: 50,
             brand: " Nike",
             rating: 4.2,
-            numReviews: 5
+            numReviews: 66
         },
         {
             _id: "3",
-            name: "Best Pants",
+            name: "Nike Men's Track Pants Gray",
             category: "Pants",
-            image: "/images/d1.jpeg",
+            image: "/images/d3.jpg",
             price: 70,
             brand: " Nike",
-            rating: 4.5,
+            rating: 4,
             numReviews: 8
         },
         {
             _id: "4",
-            name: "Best Pants",
+            name: "Nike Girl's Plain Regular fit T-Shirt",
             category: "Pants",
-            image: "/images/d1.jpeg",
-            price: 70,
+            image: "/images/d4.jpg",
+            price: 40,
             brand: " Nike",
-            rating: 4.5,
-            numReviews: 8
+            rating: 3.5,
+            numReviews: 18
         }
     ]
 };
