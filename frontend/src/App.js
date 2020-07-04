@@ -1,13 +1,14 @@
 import React from "react";
 import "./App.css";
+import data from "./data";
 
 function App() {
-  const openmenu = () =>{
-    document.querySelector(".sidebar").classList.add("open")
-  }
-  const closemenu = () =>{
-    document.querySelector(".sidebar").classList.remove("open") 
-  }
+    const openmenu = () => {
+        document.querySelector(".sidebar").classList.add("open");
+    };
+    const closemenu = () => {
+        document.querySelector(".sidebar").classList.remove("open");
+    };
     return (
         <div className="grid-container">
             <header className="header">
@@ -37,120 +38,35 @@ function App() {
             <main className="main">
                 <div className="content">
                     <ul className="products">
-                        <li>
-                            <div className="product">
-                                <img
-                                    className="product-image"
-                                    src="/images/d1.jpeg"
-                                    alt="product"
-                                />
-                                <div className="product-name">
-                                    <a href="product.html" className="product-name">
-                                        Nike T-Shirt
-                                    </a>
+                        {data.products.map(product => 
+                            <li>
+                                <div className="product">
+                                    <img
+                                        className="product-image"
+                                        src={product.image}
+                                        alt="product"
+                                    />
+                                    <div className="product-name">
+                                        <a
+                                            href="product.html"
+                                            className="product-name"
+                                        >
+                                            {product.name}
+                                        </a>
+                                    </div>
+                                    <div className="product-brand">
+                                        {product.brand}
+                                    </div>
+                                    <div className="product-price">
+                                        {product.price}
+                                    </div>
+                                    <div className="product-rating">
+                                        {product.rating} Stars{" "}
+                                        {product.numReviews}
+                                    </div>
                                 </div>
-                                <div className="product-brand">Nike</div>
-                                <div className="product-price">$60</div>
-                                <div className="product-rating">
-                                    4.5 Stars (10 Reviews)
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="product">
-                                <img
-                                    className="product-image"
-                                    src="/images/d1.jpeg"
-                                    alt="product"
-                                />
-                                <div className="product-name">
-                                    <a href="product.html" className="product-name">
-                                        Nike T-Shirt
-                                    </a>
-                                </div>
-                                <div className="product-brand">Nike</div>
-                                <div className="product-price">$60</div>
-                                <div className="product-rating">
-                                    4.5 Stars (10 Reviews)
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="product">
-                                <img
-                                    className="product-image"
-                                    src="/images/d1.jpeg"
-                                    alt="product"
-                                />
-                                <div className="product-name">
-                                    <a href="product.html" className="product-name">
-                                        Nike T-Shirt
-                                    </a>
-                                </div>
-                                <div className="product-brand">Nike</div>
-                                <div className="product-price">$60</div>
-                                <div className="product-rating">
-                                    4.5 Stars (10 Reviews)
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="product">
-                                <img
-                                    className="product-image"
-                                    src="/images/d1.jpeg"
-                                    alt="product"
-                                />
-                                <div className="product-name">
-                                    <a href="product.html" className="product-name">
-                                        Nike T-Shirt
-                                    </a>
-                                </div>
-                                <div className="product-brand">Nike</div>
-                                <div className="product-price">$60</div>
-                                <div className="product-rating">
-                                    4.5 Stars (10 Reviews)
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="product">
-                                <img
-                                    className="product-image"
-                                    src="/images/d1.jpeg"
-                                    alt="product"
-                                />
-                                <div className="product-name">
-                                    <a href="product.html" className="product-name">
-                                        Nike T-Shirt
-                                    </a>
-                                </div>
-                                <div className="product-brand">Nike</div>
-                                <div className="product-price">$60</div>
-                                <div className="product-rating">
-                                    4.5 Stars (10 Reviews)
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="product">
-                                <img
-                                    className="product-image"
-                                    src="/images/d1.jpeg"
-                                    alt="product"
-                                />
-                                <div className="product-name">
-                                    <a href="product.html" className="product-name">
-                                        Nike T-Shirt
-                                    </a>
-                                </div>
-                                <div className="product-brand">Nike</div>
-                                <div className="product-price">$60</div>
-                                <div className="product-rating">
-                                    4.5 Stars (10 Reviews)
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                        )}
                     </ul>
                 </div>
             </main>
