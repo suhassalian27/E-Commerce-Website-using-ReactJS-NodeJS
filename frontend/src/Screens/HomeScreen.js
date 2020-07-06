@@ -1,4 +1,4 @@
-import React, {  useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productActions";
@@ -15,9 +15,11 @@ function HomeScreen(props) {
         };
     }, []);
 
-    return (
-        loading ? <div>loading...</div>: 
-        error ? <div>{error}</div>:
+    return loading ? (
+        <div>loading...</div>
+    ) : error ? (
+        <div>{error}</div>
+    ) : (
         <ul className="products">
             {products.map(product => (
                 <li key={product._id}>
