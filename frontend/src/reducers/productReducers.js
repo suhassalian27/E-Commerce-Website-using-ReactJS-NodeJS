@@ -19,7 +19,7 @@ function productListReducer(state = { products: [] }, action) {
             return state;
     }
 }
-function productDetailsReducer(state = { product: {} }, action) {
+function productDetailsReducer(state = { product: { reviews: [] } }, action) {
     switch (action.type) {
         case PRODUCT_DETAILS_REQUEST:
             return { loading: true };
