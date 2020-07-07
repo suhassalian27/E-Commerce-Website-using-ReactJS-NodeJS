@@ -16,6 +16,10 @@ function ProductScreen(props) {
         };
     }, []);
 
+    const handleAddToCart = () => {
+        props.history.push("/cart/" + props.match.params.id + "?qty=" + qty);
+    };
+
     return (
         <div>
             <div className="back-to-result">
@@ -51,17 +55,37 @@ function ProductScreen(props) {
                     <div className="details-action">
                         <ul>
                             <li>Price: {product.price}</li>
-                            <li>Status: {product.status}</li>
+                            <li>
+                                Status:{" "}
+                                {product.countInStock > 0
+                                    ? "In Stock"
+                                    : "Unavailble"}
+                            </li>
                             <li>
                                 Qty:
-                                <select value={qty} onChange={(e)=>{setQty(e.target.value)}}>
-                                    {[...Array(product.countInStock).keys()].map(x=>
-                                        <option value={x+1}>{x+1}</option>
-                                    )}}
+                                <select
+                                    value={qty}
+                                    onChange={e => {
+                                        setQty(e.target.value);
+                                    }}
+                                >
+                                    {[
+                                        ...Array(product.countInStock).keys()
+                                    ].map(x => (
+                                        <option value={x + 1}>{x + 1}</option>
+                                    ))}
+                                    }
                                 </select>
                             </li>
                             <li>
-                                <button className="button">Add to Cart</button>
+                                {product.countInStock > 0 && (
+                                    <button
+                                        onClick={handleAddToCart}
+                                        className="button"
+                                    >
+                                        Add to Cart
+                                    </button>
+                                )}
                             </li>
                         </ul>
                     </div>
@@ -70,5 +94,4 @@ function ProductScreen(props) {
         </div>
     );
 }
-
 export default ProductScreen;
