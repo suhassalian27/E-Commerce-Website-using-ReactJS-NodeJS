@@ -3,7 +3,7 @@ import Cookie from "js-cookie";
 import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/cartConstants";
 
 
-const addToCart = (productId, qty) => async dispatch => {
+const addToCart = (productId, qty) => async (dispatch, getState ) => {
     try {
         const { data } = await Axios.get("/api/products/" + productId);
         dispatch({
