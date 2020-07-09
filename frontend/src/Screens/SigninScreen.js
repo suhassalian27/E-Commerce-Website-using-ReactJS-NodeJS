@@ -19,6 +19,7 @@ function SigninScreen(props) {
         <div className="form">
             <form onSubmit={submirHandler}>
                 <ul className="form-container">
+                <h2>Sign-In</h2>
                     <li>
                         <label for="email">Email</label>
                         <input
@@ -44,7 +45,7 @@ function SigninScreen(props) {
                         New to Amazon?
                     </li>
                     <li>
-                        <Link to="/register" className="button full-width">Create your Amazon account.</Link>
+                        <Link to="/register" className="button secondary text-center">Create your Amazon account.</Link>
                     </li>
                 </ul>
             </form>
