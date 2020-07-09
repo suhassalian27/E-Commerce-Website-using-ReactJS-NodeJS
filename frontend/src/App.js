@@ -5,6 +5,7 @@ import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import SigninScreen from "./screens/SigninScreen";
 
 function App() {
     const openmenu = () => {
@@ -23,7 +24,7 @@ function App() {
                     </div>
                     <div className="header-links">
                         <a href="cart.html">Cart</a>
-                        <a href="signin.html">SignIn</a>
+                        <Link to='/signin'>SignIn</Link>
                     </div>
                 </header>
                 <aside className="sidebar">
@@ -45,6 +46,7 @@ function App() {
                 </aside>
                 <main className="main">
                     <div className="content">
+                        <Route path="/signin" component={SigninScreen} />
                         <Route path="/product/:id" component={ProductScreen} />
                         <Route path="/" exact={true} component={HomeScreen} />
                         <Route path="/cart/:id?" component={CartScreen} />
