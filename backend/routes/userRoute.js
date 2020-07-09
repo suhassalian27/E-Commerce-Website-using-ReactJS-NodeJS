@@ -10,14 +10,14 @@ router.post("/signin", async (req, res) => {
     });
     if (signinUser) {
         res.send({
-            _id : signinUser.id,
-            name : signinUser.name,
-            email : signinUser.email,
-            isAdmin : signinUser.isAdmin,
-            token : getToken(user)
-        })
+            _id: signinUser.id,
+            name: signinUser.name,
+            email: signinUser.email,
+            isAdmin: signinUser.isAdmin,
+            token: getToken(signinUser)
+        });
     } else {
-        res.status(401).send({msg:'Invalid Email or Password.'})
+        res.status(401).send({ msg: "Invalid Email or Password." });
     }
 });
 
