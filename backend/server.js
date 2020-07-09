@@ -11,12 +11,10 @@ const mongodbURL = config.MONGODB_URL;
 mongoose
     .connect(mongodbURL, {
         useNewUrlParser: true,
-        // useUnifiedTopology: true
+        useUnifiedTopology: true,
         useCreateIndex: true
     })
-    .catch(error => {
-        console.log(error.reason);
-    });
+    .catch(error =>console.log(error.reason));
 
 const app = express();
 
