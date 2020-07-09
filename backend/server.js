@@ -3,6 +3,7 @@ import data from "./data";
 import config from "./config";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import bodyparser from "body-parser";
 import userRoute from "./routes/userRoute";
 
 dotenv.config();
@@ -14,10 +15,10 @@ mongoose
         useUnifiedTopology: true,
         useCreateIndex: true
     })
-    .catch(error =>console.log(error.reason));
+    .catch(error => console.log(error.reason));
 
 const app = express();
-
+app.use(bodyparser.json())
 app.use("/api/users", userRoute);
 app.get("/api/products/:id", (req, res) => {
     const productId = req.params.id;
