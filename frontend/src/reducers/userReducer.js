@@ -13,7 +13,7 @@ function userSigninReducer(state = {}, action) {
         case USER_SIGNIN_FAIL:
             return { loading: false, error: action.payload };
         default:
-            return { state };
+            return state;
     }
 }
 export { userSigninReducer };

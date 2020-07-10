@@ -9,6 +9,7 @@ import * as Cookie from "js-cookie";
 import { userSigninReducer } from "./reducers/userReducer";
 
 const cartItems = Cookie.getJSON("cartItems") || [];
+// const UserInfo = Cookie.getJSON("userInfo") || [];
 
 const initialState = { cart: { cartItems } };
 const reducer = combineReducers({

@@ -27,13 +27,15 @@ function SigninScreen(props) {
         <div className="form">
             <form onSubmit={submitHandler}>
                 <ul className="form-container">
-                    <h2>Sign-In</h2>
+                    <li>
+                        <h2>Sign-In</h2>
+                    </li>
                     <li>
                         {loading && <div>Loading...</div>}
                         {error && <div>{error}</div>}
                     </li>
                     <li>
-                        <label htmlfor="email">Email</label>
+                        <label htmlFor="email">Email</label>
                         <input
                             type="email"
                             name="email"
@@ -42,11 +44,11 @@ function SigninScreen(props) {
                         ></input>
                     </li>
                     <li>
-                        <label htmlfor="password">Password</label>
+                        <label htmlFor="password">Password</label>
                         <input
                             type="password"
-                            name="password"
                             id="password"
+                            name="password"
                             onChange={e => setPassword(e.target.value)}
                         ></input>
                     </li>

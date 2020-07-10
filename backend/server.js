@@ -3,22 +3,21 @@ import data from "./data";
 import config from "./config";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-import bodyparser from "body-parser";
+import bodyParser from "body-parser";
 import userRoute from "./routes/userRoute";
 
 dotenv.config();
 
-const mongodbURL = config.MONGODB_URL;
+const mongodbUrl = config.MONGODB_URL;
 mongoose
-    .connect(mongodbURL, {
+    .connect(mongodbUrl, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        useCreateIndex: true
     })
     .catch(error => console.log(error.reason));
 
 const app = express();
-app.use(bodyparser.json())
+app.use(bodyParser.json());
 app.use("/api/users", userRoute);
 app.get("/api/products/:id", (req, res) => {
     const productId = req.params.id;

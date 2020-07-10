@@ -6,11 +6,8 @@ import {
     USER_SIGNIN_FAIL
 } from "../constants/userConstants";
 
-const signin = (email, password) => async (dispatch) => {
-    dispatch({
-        type: USER_SIGNIN_REQUEST,
-        payload: { email, password }
-    });
+const signin = (email, password) => async dispatch => {
+    dispatch({ type: USER_SIGNIN_REQUEST, payload: { email, password } });
     try {
         const { data } = await Axios.post("/api/users/signin", {
             email,
