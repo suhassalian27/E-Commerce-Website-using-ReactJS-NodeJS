@@ -47,6 +47,7 @@ ul {
 .header-links a {
     color: white;
     text-decoration: none;
+    margin: 1em;
 }
 .header-links a:hover {
     color: rgb(255, 136, 0);
