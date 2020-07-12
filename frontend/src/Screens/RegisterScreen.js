@@ -42,7 +42,7 @@ function RegisterScreen(props) {
                             type="name"
                             name="name"
                             id="name"
-                            onChange={e => setEmail(e.target.value)}
+                            onChange={e => setName(e.target.value)}
                         ></input>
                     </li>
                     <li>
@@ -69,7 +69,7 @@ function RegisterScreen(props) {
                             type="repassword"
                             id="repassword"
                             name="repassword"
-                            onChange={e => setPassword(e.target.value)}
+                            onChange={e => setRePassword(e.target.value)}
                         ></input>
                     </li>
                     <li>
