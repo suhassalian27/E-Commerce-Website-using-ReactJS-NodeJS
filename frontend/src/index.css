@@ -318,3 +318,23 @@ th{
 tbody>tr:nth-child(odd){
     background-color: #f0f0f0;
 }
+
+/* Checkout steps */
+
+.checkout-steps{
+    display: flex;
+    justify-content: space-around;
+    width: 40rem;
+    margin: 1rem auto
+}
+.checkout-steps > div{
+    border-top: .3rem #c0c0c0 solid;
+    color : #c0c0c0;
+    flex: 1 1;
+    padding-top:  1rem;
+
+}
+.checkout-steps > div.active{
+    border-top: .3rem #f08000 solid;
+    color : #f08000;
+}
