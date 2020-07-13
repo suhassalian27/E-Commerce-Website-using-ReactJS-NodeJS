@@ -26,13 +26,13 @@ const isAuth = (req, res, next) => {
             req.user = decode;
             next();
             return;
-        })
+        });0
     }else{
         return res.status(401).send({ msg: "Token is not supplied." });
     }
 };
 const isAdmin = (req, res, next) => {
-    if (req.user && re1.user.isAdmin) {
+    if (req.user && req.user.isAdmin) {
         return next();
     }
     return res.status(401).send({ msg: "Admin Token is not valid" });
