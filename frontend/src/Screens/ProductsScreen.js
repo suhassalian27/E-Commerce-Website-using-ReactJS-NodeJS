@@ -81,7 +81,12 @@ function ProductsScreen(props) {
         <div className="content content-margined">
             <div className="product-header">
                 <h3>Products</h3>
-                <button className="button primary" onClick={() => openModal({})}>Create Product</button>
+                <button
+                    className="button primary"
+                    onClick={() => openModal({})}
+                >
+                    Create Product
+                </button>
             </div>
             {modalVisible && (
                 <div className="form">
@@ -201,6 +206,7 @@ function ProductsScreen(props) {
                             <th>Price</th>
                             <th>Category</th>
                             <th>Brand</th>
+                            <th>Count In Stock</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -212,13 +218,17 @@ function ProductsScreen(props) {
                                 <td>{product.price}</td>
                                 <td>{product.category}</td>
                                 <td>{product.brand}</td>
+                                <td>{product.countInStock}</td>
                                 <td>
-                                    <button className="button" onClick={() => openModal(product)}>
+                                    <button
+                                        className="button"
+                                        onClick={() => openModal(product)}
+                                    >
                                         Edit
                                     </button>
-                                    {'  '}
+                                    {"  "}
                                     <button
-                                    className="button secondary"
+                                        className="button secondary"
                                         onClick={() => deleteHandler(product)}
                                     >
                                         Delete
