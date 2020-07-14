@@ -59,9 +59,12 @@ function App() {
                 <main className="main">
                     <div className="content">
                         <Route path="/products" component={ProductsScreen} />
-                        <Route path="/shipping" component={ShipppingScreen} /> 
-                        <Route path="/payment" component={PaymentScreen} /> 
-                        <Route path="/placeorder" component={PlaceOrderScreen} /> 
+                        <Route path="/shipping" component={ShipppingScreen} />
+                        <Route path="/payment" component={PaymentScreen} />
+                        <Route
+                            path="/placeorder"
+                            component={PlaceOrderScreen}
+                        />
                         <Route path="/signin" component={SigninScreen} />
                         <Route path="/register" component={RegisterScreen} />
                         <Route path="/product/:id" component={ProductScreen} />
