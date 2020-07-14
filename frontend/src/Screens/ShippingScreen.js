@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { saveShipping } from "../actions/cartAction";
-import CheckoutSteps from "../components/CheckoutSteps"
+import CheckoutSteps from "../components/CheckoutSteps";
 
 function ShippingScreen(props) {
     const [address, setAddress] = useState("");
@@ -14,8 +14,8 @@ function ShippingScreen(props) {
 
     const submitHandler = e => {
         e.preventDefault();
-        dispatch(saveShipping({address, city, postalCode, country}));
-        props.history.push('payment')
+        dispatch(saveShipping({ address, city, postalCode, country }));
+        props.history.push("payment");
     };
     return (
         <div>

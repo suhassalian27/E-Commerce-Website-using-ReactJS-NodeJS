@@ -19,9 +19,9 @@ function CartScreen(props) {
             dispatch(addToCart(productId, qty));
         }
     }, []);
-    const checkoutHandler =() =>{
-        props.history.push('/signin?redirect=shipping');
-    }
+    const checkoutHandler = () => {
+        props.history.push("/signin?redirect=shipping");
+    };
 
     return (
         <div className="cart">
@@ -47,7 +47,17 @@ function CartScreen(props) {
                                     </div>
                                     <div>
                                         Qty:
-                                        <select value={item.qty} onChange={(e)=> dispatch(addToCart(item.product, e.target.value))}>
+                                        <select
+                                            value={item.qty}
+                                            onChange={e =>
+                                                dispatch(
+                                                    addToCart(
+                                                        item.product,
+                                                        e.target.value
+                                                    )
+                                                )
+                                            }
+                                        >
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -73,15 +83,13 @@ function CartScreen(props) {
             </div>
             <div className="cart-action">
                 <h3>
-                    Subtotal 
-                    ({cartItems.reduce((a, c) => a +   c.qty, 0)} items) 
-                    :
-                    ${cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
+                    Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)} items)
+                    : ${cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
                 </h3>
                 <button
                     className="button primary full-width"
                     disabled={cartItems.length === 0}
-                    onClick ={checkoutHandler}
+                    onClick={checkoutHandler}
                 >
                     Proceed to Checkout
                 </button>

@@ -9,7 +9,9 @@ function SigninScreen(props) {
     const userSignin = useSelector(state => state.userSignin);
     const { loading, userInfo, error } = userSignin;
     const dispatch = useDispatch();
-    const redirect = props.location.search?props.location.search.split("=")[1]:'/';
+    const redirect = props.location.search
+        ? props.location.search.split("=")[1]
+        : "/";
 
     useEffect(() => {
         if (userInfo) {
@@ -61,7 +63,11 @@ function SigninScreen(props) {
                     <li>New to Amazon?</li>
                     <li>
                         <Link
-                            to={redirect === "/" ? "register" : "register?redirect="+redirect }
+                            to={
+                                redirect === "/"
+                                    ? "register"
+                                    : "register?redirect=" + redirect
+                            }
                             className="button secondary text-center"
                         >
                             Create your Amazon account.

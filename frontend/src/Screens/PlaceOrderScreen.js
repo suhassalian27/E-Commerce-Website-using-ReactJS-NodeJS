@@ -12,20 +12,17 @@ function PlaceOrderScreen(props) {
     } else if (!payment) {
         props.history.push("/payment");
     }
-    const itemsPrice = cartItems.reduce((a,c) => a+ c.price*c.qty,0)
-    const shippingPrice = itemsPrice > 100?0 : 10;
-    const taxPrice = 0.15*itemsPrice;
-    const totalPrice= itemsPrice + shippingPrice+ taxPrice;
-    
+    const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
+    const shippingPrice = itemsPrice > 100 ? 0 : 10;
+    const taxPrice = 0.15 * itemsPrice;
+    const totalPrice = itemsPrice + shippingPrice + taxPrice;
+
     const dispatch = useDispatch();
 
-    const placeOrderHandler =() =>{
-        // create an order
-    }
-
     useEffect(() => {}, []);
-    const checkoutHandler = () => {
-        props.history.push("/signin?redirect=shipping");
+    const placeOrderHandler = () => {
+        props.history.push("/");
+        alert("Order placed successfully.");
     };
 
     return (
@@ -87,7 +84,10 @@ function PlaceOrderScreen(props) {
                 <div className="placeorder-action">
                     <ul>
                         <li>
-                            <button className="button primary full-width" onClick={placeOrderHandler}>
+                            <button
+                                className="button primary full-width"
+                                onClick={placeOrderHandler}
+                            >
                                 Place Order
                             </button>
                         </li>
@@ -111,7 +111,6 @@ function PlaceOrderScreen(props) {
                             <div>${totalPrice}</div>
                         </li>
                     </ul>
-                    
                 </div>
             </div>
         </div>
