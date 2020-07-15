@@ -145,6 +145,7 @@ a:hover {
 }
 .sidebar ul {
     list-style: none;
+    margin: 1rem;
 }
 
 /* Product details */
