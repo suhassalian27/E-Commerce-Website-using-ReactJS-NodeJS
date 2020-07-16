@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&family=Vollkorn:ital,wght@0,500;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,900&family=Vollkorn+SC:wght@400;600;700;900&family=Vollkorn:ital,wght@0,500;1,400;1,500&display=swap");
 
 html {
     font-size: 62.5%;
@@ -69,11 +69,14 @@ ul {
 }
 .footer {
     grid-area: footer;
-    background-color: rgb(29, 42, 54);
-    color: white;
+    /* padding-top: 5rem; */
+    /* margin-top: rem; */
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px .1px 10px rgb(212, 175, 55);
 }
 a {
     text-decoration: none;
@@ -90,14 +93,17 @@ a:hover {
     align-items: center;
     flex-wrap: wrap;
     z-index: 0;
+    background-color: #f8f8f8;
+
 }
 .products li {
     list-style: none;
     padding: 0;
-    flex: 0 1 34rem;
+    flex: 0 1 30rem;
     margin: 1rem;
     height: 40rem;
-    border-bottom: 0.1rem #c0c0c0 solid;
+    /* border-bottom: 0.1rem #c0c0c0 solid; */
+    background-color: #ffffff;
 }
 .product {
     display: flex;
@@ -105,10 +111,18 @@ a:hover {
     justify-content: space-between;
     height: 100%;
     margin: 0.5rem;
+    align-items: center;
+    transition: .3s;
+}
+.product:hover{
+    /* border: .1px solid rgb(200, 200, 200); */
+    box-shadow: 1px 1px 10px rgb(212, 175, 55);
 }
 .product-name {
     font-size: 2rem;
     font-weight: bold;
+    color: black;
+    text-align: center;
 }
 .product-brand {
     font-size: 1.2rem;
@@ -121,6 +135,11 @@ a:hover {
 .product-image {
     max-width: 24rem;
     max-height: 24rem;
+    transition: .5s;
+}
+.product-image:hover {
+    max-width: 25rem;
+    max-height: 25rem;
 }
 .product-rating {
     margin-bottom: 1rem;
@@ -170,19 +189,6 @@ a:hover {
 .sidebar-close-button::focus {
     outline: none;
 }
-/* .sidebar-close-button {
-    border-radius: 50%;
-    border: 0.1 rem black;
-    width: 3rem;
-    height: 3rem;
-    padding: 0.5rem;
-    font-size: 2rem;
-    padding-top: 0;
-    cursor: pointer;
-    position: absolute;
-    right: 1rem;
-    top: 1.5rem;
-} */
 
 .sidebar h3 {
     color: white;
@@ -450,8 +456,8 @@ tbody > tr:nth-child(odd) {
 /* Courasel */
 .corousel {
     /* font-family: 'Yeseva One', cursive; */
-    font-family: 'Vollkorn', serif;
-    font-style: italic;
+    font-family: "Playfair Display", serif;
+    /* font-style: italic; */
     font-weight: 400;
 }
 .corousel .item {
