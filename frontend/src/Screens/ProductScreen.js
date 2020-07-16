@@ -88,6 +88,7 @@ function ProductScreen(props) {
                                         Add to Cart
                                     </button>
                                 )}
+                                {console.log(product.category)}
                             </li>
                         </ul>
                     </div>
