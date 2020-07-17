@@ -14,7 +14,7 @@ import ShipppingScreen from "./screens/ShippingScreen";
 import PaymentScreen from "./screens/PaymentScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 
-import logo from './Images/logo.png'
+import logo from "./Images/logo.png";
 
 function App() {
     const userSignin = useSelector(state => state.userSignin);
@@ -32,17 +32,27 @@ function App() {
                     <div className="brand">
                         <button onClick={openmenu}>&#9776;</button>
                         <Link to="/">
-                        Origami
-                        <img src={logo} className="logo"/>
+                            Origami
+                            <img src={logo} className="logo" />
                         </Link>
                     </div>
                     <div className="header-links">
-                        <Link to="/cart">Cart</Link>
-                        {userInfo ? (
-                            <Link to="/profile">{userInfo.name}</Link>
-                        ) : (
-                            <Link to="/signin">SignIn</Link>
-                        )}
+                        <span>
+                            <Link to="/cart">
+                                <span class="material-icons">
+                                    shopping_cart
+                                </span>
+                            </Link>
+                        </span>
+                        <span>
+                            {userInfo ? (
+                                <Link to="/profile">{userInfo.name}</Link>
+                            ) : (
+                                <Link to="/signin">
+                                    <span class="material-icons">login</span>
+                                </Link>
+                            )}
+                        </span>
                     </div>
                 </header>
                 <aside className="sidebar">
@@ -51,7 +61,7 @@ function App() {
                         className="sidebar-close-button"
                         onClick={closemenu}
                     >
-                        x
+                        <span class="material-icons">arrow_back_ios</span>
                     </button>
                     <ul>
                         <li>
@@ -70,7 +80,6 @@ function App() {
                 </aside>
                 <main className="main">
                     <div className="content">
-                              
                         <Route path="/products" component={ProductsScreen} />
                         <Route path="/shipping" component={ShipppingScreen} />
                         <Route path="/payment" component={PaymentScreen} />
