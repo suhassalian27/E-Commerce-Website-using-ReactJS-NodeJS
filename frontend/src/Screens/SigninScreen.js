@@ -60,7 +60,7 @@ function SigninScreen(props) {
                             Signin
                         </button>
                     </li>
-                    <li>New to Amazon?</li>
+                    <li>New to Origami?</li>
                     <li>
                         <Link
                             to={
@@ -70,7 +70,7 @@ function SigninScreen(props) {
                             }
                             className="button secondary text-center"
                         >
-                            Create your Amazon account.
+                            Create your Origami account.
                         </Link>
                     </li>
                 </ul>
