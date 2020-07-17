@@ -67,7 +67,7 @@ function RegisterScreen(props) {
                         ></input>
                     </li>
                     <li>
-                        <label htmlFor="repassword">RE-Enter Password</label>
+                        <label htmlFor="repassword">Retype Password</label>
                         <input
                             type="repassword"
                             id="repassword"
