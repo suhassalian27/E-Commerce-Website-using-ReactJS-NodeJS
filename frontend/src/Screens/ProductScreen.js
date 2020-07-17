@@ -23,7 +23,9 @@ function ProductScreen(props) {
     return (
         <div>
             <div className="back-to-result">
-                <Link to="/">Back to result</Link>
+                <Link to="/">
+                    <span class="material-icons">arrow_back</span>
+                </Link>
             </div>
             {loading ? (
                 <div>Loading...</div>
@@ -37,32 +39,23 @@ function ProductScreen(props) {
                     <div className="details-info">
                         <ul>
                             <li>
-                                <h4>{product.name}</h4>
+                                <h4>{product.brand}</h4>
+                            </li>
+                            <li>
+                                <h1>{product.name}</h1>
                             </li>
                             <li>
                                 {product.rating} Stars ({product.numReviews}{" "}
                                 Reviews)
                             </li>
                             <li>
-                                Price : $<b>{product.price}</b>
+                                $<b>{product.price}</b>
                             </li>
                             <li>
-                                Description:
                                 <div>{product.description}</div>
                             </li>
-                        </ul>
-                    </div>
-                    <div className="details-action">
-                        <ul>
-                            <li>Price: {product.price}</li>
                             <li>
-                                Status:{" "}
-                                {product.countInStock > 0
-                                    ? "In Stock"
-                                    : "Unavailble"}
-                            </li>
-                            <li>
-                                Qty:
+                                Net Qty :
                                 <select
                                     value={qty}
                                     onChange={e => {
@@ -78,6 +71,11 @@ function ProductScreen(props) {
                                     ))}
                                     }
                                 </select>
+                            </li>
+                            <li>
+                                {product.countInStock > 0
+                                    ? "In Stock"
+                                    : "Unavailble"}
                             </li>
                             <li>
                                 {product.countInStock > 0 && (
