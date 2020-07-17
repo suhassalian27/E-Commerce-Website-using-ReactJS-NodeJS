@@ -221,14 +221,14 @@ function ProductsScreen(props) {
                                 <td>{product.countInStock}</td>
                                 <td>
                                     <button
-                                        className="button"
+                                        className="product-button"
                                         onClick={() => openModal(product)}
                                     >
                                         Edit
                                     </button>
                                     {"  "}
                                     <button
-                                        className="button secondary"
+                                        className="product-button secondary"
                                         onClick={() => deleteHandler(product)}
                                     >
                                         Delete
