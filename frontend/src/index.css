@@ -2,13 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,900&family=Vollkorn+SC:wght@400;600;700;900&family=Vollkorn:ital,wght@0,500;1,400;1,500&display=swap");
 
+/* fonts */
+/* font-family: Pacifico;
+font-family: Yeseva One;
+font-family: Playfair;
+font-family: Vollkorn;
+font-family: Vollkorn VC; */
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
 }
 body {
     font: 1.6rem Helvetica;
-    height: 100vh;
+    height: 100%;
     margin: 0%;
 }
 button {
@@ -22,6 +29,10 @@ button {
 }
 ul {
     padding: 0;
+}
+a,
+link {
+    text-decoration: none !important;
 }
 .grid-container {
     display: grid;
@@ -45,6 +56,7 @@ ul {
     position: sticky;
     top: 0;
     z-index: 9;
+    box-shadow: 5px 0.1px 10px rgb(212, 175, 55);
 }
 .logo {
     height: 50px;
@@ -56,12 +68,18 @@ ul {
     text-decoration: none;
     font-family: "Pacifico", cursive;
 }
-.header-links a {
+.header-links span {
+    margin-right: 2rem;
+}
+.header-links a span {
+    font-size: 3.5rem;
     color: rgb(0, 0, 0);
     text-decoration: none;
-    margin: 1em;
+    transition: 0.3s;
+    margin: 0;
+    padding: 0;
 }
-.header-links a:hover {
+.header-links a span:hover {
     color: rgb(212, 175, 55);
 }
 .main {
@@ -69,14 +87,12 @@ ul {
 }
 .footer {
     grid-area: footer;
-    /* padding-top: 5rem; */
-    /* margin-top: rem; */
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 5px .1px 10px rgb(212, 175, 55);
+    box-shadow: 5px 0.1px 10px rgb(212, 175, 55);
 }
 a {
     text-decoration: none;
@@ -94,7 +110,6 @@ a:hover {
     flex-wrap: wrap;
     z-index: 0;
     background-color: #f8f8f8;
-
 }
 .products li {
     list-style: none;
@@ -112,9 +127,9 @@ a:hover {
     height: 100%;
     margin: 0.5rem;
     align-items: center;
-    transition: .3s;
+    transition: 0.3s;
 }
-.product:hover{
+.product:hover {
     /* border: .1px solid rgb(200, 200, 200); */
     box-shadow: 1px 1px 10px rgb(212, 175, 55);
 }
@@ -123,6 +138,10 @@ a:hover {
     font-weight: bold;
     color: black;
     text-align: center;
+    transition: 0.3s;
+}
+.product-name:hover {
+    color: rgb(212, 175, 55);
 }
 .product-brand {
     font-size: 1.2rem;
@@ -135,7 +154,7 @@ a:hover {
 .product-image {
     max-width: 24rem;
     max-height: 24rem;
-    transition: .5s;
+    transition: 0.5s;
 }
 .product-image:hover {
     max-width: 25rem;
@@ -166,12 +185,9 @@ a:hover {
     transform: translate(0);
 }
 .sidebar-close-button {
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    /* border-radius: 50%; */
     border: 0.1rem rgba(0, 0, 0, 0);
     background-color: rgba(255, 255, 255, 0);
-    color: rgb(255, 254, 254);
+    /* color: rgb(255, 254, 254); */
     width: 3rem;
     height: 3rem;
     padding: 0.5rem;
@@ -183,7 +199,11 @@ a:hover {
     top: 0.1rem;
     /* outline: none; */
 }
-.sidebar-close-button:hover {
+.sidebar-close-button span {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+}
+.sidebar-close-button span:hover {
     color: rgb(212, 175, 55);
 }
 .sidebar-close-button::focus {
@@ -218,29 +238,48 @@ a:hover {
 }
 
 /* Product details */
+/* 
+font-family: Pacifico;
+font-family: Yeseva One;
+font-family: Playfair;
+font-family: Vollkorn;
+font-family: Vollkorn VC; 
+*/
 
 .details {
     display: flex;
-    /* justify-content: space-between; */
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 1rem;
+    font-family: Vollkorn VC;
+    font-size: 2rem;
+    position: relative;
+    min-height: 100vh;
 }
 .details-image {
-    flex: 2 1 60rem;
+    flex: 1 1 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 .details-image img {
-    max-width: 60rem;
+    max-width: 35rem;
     width: 80%;
-    /* height: 10%; */
+    transition: 0.5s;
 }
-.details-info {
-    flex: 1 1 30rem;
-}
-.details-action {
-    flex: 1 1 30rem;
+.details-image img:hover {
+    max-width: 38rem;
+    width: 82%;
+    transition: 0.3s;
 }
 
+.details-info {
+    flex: 1 1 30rem;
+    height: 100%;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
 .details-info ul,
 .details-action ul {
     list-style-type: none;
@@ -250,26 +289,49 @@ a:hover {
 .details-action li {
     margin: 1rem;
 }
-.back-to-result {
-    padding: 1rem;
+.back-to-result a span {
+    font-size: 3.5rem;
+    padding: 0.5rem 0 0 1rem;
+    color: black;
+    transition: 0.3s;
+}
+.back-to-result a span:hover {
+    color: rgb(212, 175, 55);
 }
 
-.details-action ul li:last-child {
+.details-info ul li h1 {
+    font-family: Vollkorn VC;
+    font-size: 3rem;
+}
+.details-info ul li:nth-child(4) {
+    font-size: 2rem;
+    margin-top: 5rem;
+}
+.details-info ul li:nth-child(5) {
+    font-size: 1.5rem;
+    color: rgb(97, 97, 97);
+    margin-bottom: 4rem;
+}
+.details-info ul li:nth-child(7) {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: rgb(97, 97, 97);
+}
+.details-info ul li:last-child {
     display: flex;
     flex-direction: column;
 }
-.details-action {
-    border: 0.1rem #808080 solid;
-    border-radius: 0.5rem;
-    background: #f8f8f8;
-    /* padding: 1rem; */
-}
 .button {
     padding: 1rem;
-    border: 0.1rem #808080 solid;
+    border: 0.2rem #000000 solid;
     cursor: pointer;
     border-radius: 0.5rem;
     background-color: rgb(212, 175, 55);
+    transition: 0.3s;
+}
+.button:hover {
+    /* border: 0.2rem #000000 solid; */
+    background-color: rgb(255, 255, 255);
 }
 .button:hover {
     border: 0.1rem #404040 solid;
@@ -291,6 +353,8 @@ a:hover {
     flex-wrap: wrap;
     margin: 1rem;
     align-items: flex-start;
+    position: relative;
+    min-height: 100vh;
 }
 .cart-list {
     flex: 3 1 60rem;
@@ -344,6 +408,8 @@ a:hover {
     justify-content: center;
     align-items: center;
     height: 100%;
+    position: relative;
+    min-height: 90vh;
 }
 .form-container {
     display: flex;
@@ -368,13 +434,15 @@ input {
 }
 
 /* Products */
-
+.content{
+    position: relative;
+    min-height: 100vh;
+}
 .product-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
-
 .content-margined {
     margin: 1rem;
 }
@@ -387,6 +455,20 @@ th {
 tbody > tr:nth-child(odd) {
     background-color: #f0f0f0;
 }
+.product-button{
+    width: 5.6rem;
+    margin: .1rem;
+    border: 0.2rem #000000 solid;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: rgb(212, 175, 55);
+    transition: 0.3s;
+}
+.product-button:hover{
+    border: 0.2rem #000000 solid;
+    background-color: rgb(255, 255, 255);
+}
+
 
 /* Checkout steps */
 
@@ -482,7 +564,7 @@ tbody > tr:nth-child(odd) {
     text-shadow: 2px 2px 2px black;
 }
 span {
-    color: #f08000;
+    color: rgb(212, 175, 55);
 }
 .caption img {
     height: 35rem;
