@@ -1,7 +1,15 @@
 #  E-Commerce Website using MERN Stack.
-
-## General info
 This is a E-Commerce website developed using ReactJS for the frontEnd and NodeJs for the backend. 
+
+
+## Table of contents
+* [Prerequisites](#prerequisites)
+* [Requirements](#requirements)
+* [Technologies](#technologies)
+* [Features](#features)
+* [Screenshots](#screenshots)
+* [Contact](#contact)
+
 
 ## Prerequisites
 - Text Editor ([VS Code](https://code.visualstudio.com/download) , [Atom](https://atom.io/), [Brackets](http://brackets.io/), etc.)
@@ -9,7 +17,7 @@ This is a E-Commerce website developed using ReactJS for the frontEnd and NodeJs
 - MongoDB - [install here](https://docs.mongodb.com/manual/installation/)
 
 
-## Installing
+## Requirements
 To run this project, install it locally using npm:
 
 - git clone git@github.com:suhassalian27/E-Commerce-Website-using-ReactJS-NodeJS.git
