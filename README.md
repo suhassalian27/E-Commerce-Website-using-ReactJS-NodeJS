@@ -1,5 +1,5 @@
 #  E-Commerce Website using MERN Stack.
-This is a E-Commerce website developed using ReactJS for the frontEnd and NodeJs for the backend. 
+A E-Commerce website developed using ReactJS for the frontend, NodeJs for the backend, MongoDB as database.
 
 
 ## Table of contents
