@@ -28,7 +28,7 @@ function CartScreen(props) {
             <div className="cart-list">
                 <ul className="cart-list-container">
                     <li>
-                        <h3>Shopping Cart</h3>
+                        <h1>Your Cart</h1>
                         <div>Price</div>
                     </li>
                     {cartItems.length === 0 ? (
@@ -47,7 +47,7 @@ function CartScreen(props) {
                                         </Link>
                                     </div>
                                     <div>
-                                        Qty:
+                                        Quantity :
                                         <select
                                             value={item.qty}
                                             onChange={e =>
@@ -70,7 +70,7 @@ function CartScreen(props) {
                                                     item.product
                                                 )
                                             }
-                                            className="Button"
+                                            className="cart-button"
                                         >
                                             Delete
                                         </button>
