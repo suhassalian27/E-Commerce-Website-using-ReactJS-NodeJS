@@ -8,7 +8,9 @@ import productRoute from "./routes/productRoute";
 
 dotenv.config();
 
+const PORT = process.env.PORT || 5000;
 const mongodbUrl = config.MONGODB_URL;
+
 mongoose
     .connect(mongodbUrl, {
         useNewUrlParser: true,
@@ -18,7 +20,6 @@ mongoose
     .catch(error => console.log(error.reason));
 
 const app = express();
-const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use("/api/users", userRoute);
