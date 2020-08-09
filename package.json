@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x"
+  },
   "scripts": {
     "start": "nodemon --watch backend --exec babel-node backend/server.js",
-    "heroku-postbuild" : "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install cd client && npm run build cd client"
   },
   "repository": {
-    "type": "git", 
+    "type": "git",
     "url": "git+https://github.com/suhassalian27/E-Commerce-Website-using-ReactJS-NodeJS.git"
   },
   "author": "Suhas Salian",
