@@ -15,8 +15,7 @@ function CartScreen(props) {
         dispatch(removeFromCart(productId));
     };
     useEffect(() => {
-        
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
         if (productId) {
             dispatch(addToCart(productId, qty));
         }
@@ -35,7 +34,8 @@ function CartScreen(props) {
                     </li>
                     {cartItems.length === 0 ? (
                         <div>
-                            <h1>Cart is Empty.</h1></div>
+                            <h1>Cart is Empty.</h1>
+                        </div>
                     ) : (
                         cartItems.map(item => (
                             <li>

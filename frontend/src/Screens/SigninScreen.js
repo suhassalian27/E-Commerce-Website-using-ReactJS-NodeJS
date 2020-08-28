@@ -19,7 +19,6 @@ function SigninScreen(props) {
             props.history.push(redirect);
         }
         return () => {
-            //
         };
     }, [userInfo]);
 
