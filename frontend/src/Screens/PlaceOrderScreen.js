@@ -19,7 +19,9 @@ function PlaceOrderScreen(props) {
 
     const dispatch = useDispatch();
 
-    useEffect(() => {}, []);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const placeOrderHandler = () => {
         props.history.push("/");
         alert("Order placed successfully.");

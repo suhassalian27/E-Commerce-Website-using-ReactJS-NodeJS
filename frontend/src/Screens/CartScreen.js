@@ -15,6 +15,8 @@ function CartScreen(props) {
         dispatch(removeFromCart(productId));
     };
     useEffect(() => {
+        
+        window.scrollTo(0, 0)
         if (productId) {
             dispatch(addToCart(productId, qty));
         }

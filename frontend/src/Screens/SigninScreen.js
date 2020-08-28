@@ -14,6 +14,7 @@ function SigninScreen(props) {
         : "/";
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         if (userInfo) {
             props.history.push(redirect);
         }

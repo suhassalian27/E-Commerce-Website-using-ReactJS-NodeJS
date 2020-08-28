@@ -10,6 +10,7 @@ function ProductScreen(props) {
     const dispatch = useDispatch();
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         dispatch(detailsProduct(props.match.params.id));
         return () => {
             //
